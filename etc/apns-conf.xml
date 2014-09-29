@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains fake APNs that are necessary for the emulator
+     to talk to the network.  It should only be installed for SDK builds.
+
+     This file is not installed by the local Android.mk, it's installed using
+     a PRODUCT_COPY_FILES line in the sdk section of the toplevel Makefile.
+-->
+
+<!-- use empty string to specify no proxy or port -->
+<!-- This version must agree with that in apps/common/res/apns.xml -->
+<apns version="7">
+    <apn carrier="Android"
+        mcc="310"
+        mnc="995"
+        apn="internet"
+        user="*"
+        server="*"
+        password="*"
+        mmsc="null"
+    />
+    <apn carrier="TelKila"
+        mcc="310"
+        mnc="260"
+        apn="internet"
+        user="*"
+        server="*"
+        password="*"
+        mmsc="null"
+    />
+    <apn carrier="China Mobile 00"
+        mcc="460"
+        mnc="00"
+        apn="cmnet"
+        user="card"
+        password="card"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="China Unicom 01"
+        mcc="460"
+        mnc="01"
+        apn="3gnet"
+        user="card"
+        password="card"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="China Mobile 02"
+        mcc="460"
+        mnc="02"
+        apn="cmnet"
+        user="card"
+        password="card"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="China Telecom 03"
+        mcc="460"
+        mnc="03"
+        apn="ctnet"
+        user="card"
+        password="card"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="China Telecom 05"
+        mcc="460"
+        mnc="05"
+        apn="ctnet"
+        user="card"
+        password="card"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="China Unicom 06"
+        mcc="460"
+        mnc="06"
+        apn="3gnet"
+        user="card"
+        password="card"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="China Mobile 07"
+        mcc="460"
+        mnc="07"
+        apn="cmnet"
+        user="card"
+        password="card"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="Russia MTS"
+        mcc="250"
+        mnc="01"
+        apn="internet.mts.ru"
+        user="mts"
+        password="mts"
+        server=""
+        mmsc="null"
+    />
+    <apn carrier="Russia Megafon"
+         mcc="250"
+         mnc="02"
+         apn="internet"
+         user="gdata"
+         password="gdata"
+         server=""
+         mmsc="null"
+    />
+    <apn carrier="Russia Beeline Home"
+         mcc="250"
+         mnc="99"
+         apn="home.beeline.ru"
+         user="beeline"
+         password="beeline"
+         server=""
+         mmsc="null"
+    />
+    <apn carrier="Russia Beeline Internet"
+         mcc="250"
+         mnc="99"
+         apn="internet.beeline.ru"
+         user="beeline"
+         password="beeline"
+         server=""
+         mmsc="null"
+    />
+    <apn carrier="Ukraine Intertelecom"
+         mcc="255"
+         mnc="04"
+         apn="it.od.ua"
+         user="IT"
+         password="IT"
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Ukraine PeopleNet"
+         mcc="255"
+         mnc="21"
+         apn="people.net.ua"
+         user=""
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Ukraine CDMA Ukraine"
+         mcc="255"
+         mnc="23"
+         apn="3g.utel.ua"
+         user=""
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Romania Vodafone"
+         mcc="226"
+         mnc="01"
+         apn="internet.vodafone.ro"
+         user=""
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Romania DIGI"
+         mcc="226"
+         mnc="05"
+         apn="internet"
+         user=""
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Romania Orange"
+         mcc="226"
+         mnc="10"
+         apn="internet"
+         user=""
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Poland Plus"
+         mcc="260"
+         mnc="01"
+         apn="internet"
+         user=""
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Poland T-Mobile"
+         mcc="260"
+         mnc="02"
+         apn="internet"
+         user="default"
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Poland Orange"
+         mcc="260"
+         mnc="03"
+         apn="internet"
+         user=""
+         password=""
+         server=""
+         mmsc=""
+    />
+    <apn carrier="Poland Play"
+         mcc="260"
+         mnc="06"
+         apn="internet"
+         user="default"
+         password=""
+         server=""
+         mmsc=""
+    />
+</apns>

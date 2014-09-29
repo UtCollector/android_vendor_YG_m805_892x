@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ril type="multiple"><!--type="fixed" or "multiple"-->
+	<interface type="uart" uart_channel="tcc-uart-at">
+		<vendor name="HUAWEI" id="0x12D1">
+			<product name="MU509" id="0x1001" type="module"><!-- type="dongle"-->	
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>tcc-uart5</at_channel>
+				<!--<gps_channel>ttyUSB5</gps_channel>-->
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs><!-- "struct" or "line" or "customized:fixed string", if "line", it will use "rild -d /dev/tty-uart5 -x /dev/ttyUSB0" 
+												if it is starting with "customized:", the string behand the "customized:" will be used, no matter what the string is.-->
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial> <!--voice_path="pcm" or "pcm_soft" or "anolog1" or "anolog2"-->
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc><!--Basestation Location-->
+					<nts>enable</nts><!--Network Service-->
+					<gps>none</gps>
+					<agps>none</agps>
+				</functions>
+			</product>
+		</vendor>
+	</interface>
+	<interface type="ttyUSB">
+		<vendor name="HUAWEI" id="0x12D1" method="name" at="auto" data_channel="ttyUSB0"><!-- method="id" at="fixed" at_channel="ttyUSB2"-->
+			<product name="MU509" id="0x1001" type="module"><!-- type="dongle">-->	
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<!--<gps_channel>ttyUSB5</gps_channel>-->
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="handset">enable</dial> <!--voice_path="pcm" or "anolog1" or "anolog2"-->
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc><!--Basestation Location-->
+					<nts>enable</nts><!--Network Service-->
+					<gps>none</gps>
+					<agps>none</agps>
+				</functions>
+			</product>
+			<product name="EM770" id="0x1001">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="EC122" id="0x140C">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-evdo-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E220" id="0x1003">
+				<data_channel>ttyUSB0</data_channel>
+				<at_channel>ttyUSB1</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="EM770W" id="0x1001">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="EM820W" id="0x1404">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="K3770" id="0x14C9">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="K3765" id="0x14C9">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="EM660" id="0x1001">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,CDMA</pattern>
+				<libpath>/system/lib/libtcc-evdo-ril.so</libpath>
+				<libargs>customized:-d /dev/ttyUSB2</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E173" id="0x140C">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E261" id="0x140C">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<!--<libpath>/system/lib/libhuawei-ril.so</libpath>
+				<libargs>customized: -d /dev/ttyUSB2</libargs>-->
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E1820" id="0x14ac">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<!--<libpath>/system/lib/libhuawei-ril.so</libpath>
+				<libargs>customized: -d /dev/ttyUSB2</libargs>-->
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E150" id="0x14ac">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<!--<libpath>/system/lib/libhuawei-ril.so</libpath>
+				<libargs>customized: -d /dev/ttyUSB2</libargs>-->
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="EC150" id="0x140c">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,CDMA</pattern>
+				<!--<libpath>/system/lib/libhuawei-ril.so</libpath>
+				<libargs>customized: -d /dev/ttyUSB2</libargs>-->
+				<libpath>/system/lib/libtcc-evdo-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="EC189" id="0x140C">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,CDMA</pattern>
+				<libpath>/system/lib/libtcc-evdo-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E1756" id="0x1001">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E1750" id="0x1001">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E1750" id="0x1003">
+				<data_channel>ttyUSB0</data_channel>
+				<at_channel>ttyUSB1</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E1261" id="0x140c">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB3</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E1550" id="0x1001">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="E176G" id="0x1001">
+				<data_channel>ttyUSB0</data_channel>
+				<dial_channel>ttyUSB1</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">disable</dial>
+					<sms>disable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>enable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+		</vendor>
+		<vendor name="SIMCOM" id="0x05C6" method="name" at="auto" data_channel="ttyUSB3">
+			<product name="SIMCOM_SIM5320E" id="0x9000">
+				<data_channel>ttyUSB3</data_channel>
+				<dial_channel>ttyUSB0</dial_channel>
+				<at_channel>ttyUSB2</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="handset">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+		</vendor>
+		<vendor name="ZTE" id="0x19d2" method="name" at="auto" data_channel="ttyUSB2">
+			<product name="MF180" id="0x0117">
+				<data_channel>ttyUSB2</data_channel>
+				<dial_channel>ttyUSB0</dial_channel>
+				<at_channel>ttyUSB1</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="MF190" id="0x0117">
+				<data_channel>ttyUSB2</data_channel>
+				<dial_channel>ttyUSB0</dial_channel>
+				<at_channel>ttyUSB1</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="MF100" id="0x0031">
+				<data_channel>ttyUSB2</data_channel>
+				<dial_channel>ttyUSB0</dial_channel>
+				<at_channel>ttyUSB1</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="MF1001" id="0x0031">
+				<data_channel>ttyUSB2</data_channel>
+				<dial_channel>ttyUSB0</dial_channel>
+				<at_channel>ttyUSB1</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="MF637" id="0x0121">
+				<data_channel>ttyUSB2</data_channel>
+				<dial_channel>ttyUSB0</dial_channel>
+				<!--<at_channel>ttyUSB4</at_channel>-->
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+			<product name="MSA190UP" id="0x0091">
+				<data_channel>ttyUSB2</data_channel>
+				<dial_channel>ttyUSB0</dial_channel>
+				<!--<at_channel>ttyUSB4</at_channel>-->
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+		</vendor>
+	</interface>
+	<interface type="ttyACM">
+		<vendor name="HUAWEI" id="0x12D1" method="name" at="auto" data_channel="ttyACM0"><!-- at_channel="auto">-->
+			<product name="EM560" id="0x1D09" type="module">
+				<data_channel>ttyACM0</data_channel>
+				<dial_channel>ttyACM1</dial_channel>
+				<at_channel>ttyACM2</at_channel>
+				<pattern>GSM,TD-SCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial>enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+		</vendor>
+		<vendor name="ZTE" id="0x19d2" method="name" at="auto" data_channel="ttyACM0">
+			<product name="K3772-Z" id="0x1181">
+				<data_channel>ttyACM0</data_channel>
+				<at_channel>ttyACM1</at_channel>
+				<pattern>GSM,WCDMA</pattern>
+				<libpath>/system/lib/libtcc-wcdma-ril.so</libpath>
+				<libargs>struct</libargs>
+				<functions>
+					<data>enable</data>
+					<dial voice_path="pcm">enable</dial>
+					<sms>enable</sms>
+					<phonebook>disable</phonebook>
+					<stk>disable</stk>
+					<bsloc>disable</bsloc>
+					<nts>enable</nts>
+				</functions>
+			</product>
+		</vendor>
+	</interface>
+</ril>
